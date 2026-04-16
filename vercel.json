@@ -1,4 +1,5 @@
 {
+  "root": "frontend",
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
@@ -7,10 +8,10 @@
   "env": {
     "VITE_API_BASE_URL": "@vite_api_base_url"
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ],
   "headers": [
